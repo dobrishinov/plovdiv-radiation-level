@@ -37,7 +37,7 @@
             <div class="position-sticky pt-3">
                <ul class="nav flex-column">
                   <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="index.html">
+                     <a class="nav-link" aria-current="page" href="index.html">
                         <span data-feather="activity"></span>
                         Dashboard
                      </a>
@@ -88,7 +88,7 @@
                      </a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="latest-60-days.html">
+                     <a class="nav-link active" href="latest-60-days.html">
                         <span data-feather="bar-chart-2"></span>
                         Latest 60 Days
                      </a>
@@ -113,7 +113,7 @@
          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-               <h1 class="h2">Dashboard</h1>
+               <h1 class="h2">History - Latest 60 Days</h1>
             </div>
 
             <div class="table-responsive">
@@ -122,22 +122,22 @@
                      <div class="col">
                         <div class="modal-content">
                            <div class="modal-header">
-                              <h5 class="modal-title">Radiation level last 2 hours - μSv/h</h5>
+                              <h5 class="modal-title">Radiation level last 60 days - μSv/h</h5>
                            </div>
                            <div class="modal-body">
                               <iframe width="100%" height="350px" style="border: 1px solid #cccccc;"
-                                 src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Microsievert+%28%CE%BCSv%2Fh%29&type=column"></iframe>
+                                 src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&days=60&title=Microsievert+%28%CE%BCSv%2Fh%29&type=column"></iframe>
                            </div>
                         </div>
                         <br />
                         <div class="col">
                            <div class="modal-content">
                               <div class="modal-header">
-                                 <h5 class="modal-title">Radiation level last 2 hours - CPM</h5>
+                                 <h5 class="modal-title">Radiation level last 60 days - CPM</h5>
                               </div>
                               <div class="modal-body">
                                  <iframe width="100%" height="350px" style="border: 1px solid #cccccc;"
-                                    src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Counts+Per+Minute+%28CPM%29&type=column"></iframe>
+                                    src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&days=60&title=Counts+Per+Minute+%28CPM%29&type=column"></iframe>
                               </div>
                            </div>
                         </div>
@@ -145,68 +145,17 @@
                         <div class="col">
                            <div class="modal-content">
                               <div class="modal-header">
-                                 <h5 class="modal-title">Radiation level last 2 hours - CPS</h5>
+                                 <h5 class="modal-title">Radiation level last 60 days - CPS</h5>
                               </div>
                               <div class="modal-body">
                                  <iframe width="100%" height="350px" style="border: 1px solid #cccccc;"
-                                    src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Counts+Per+Second+%28CPS%29&type=column"></iframe>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <br />
-                  <div class="container">
-                     <div class="row">
-                        <div class="col">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <h5 class="modal-title">[ SAFE ] < 0.50 μSv/h</h5>
-                              </div>
-                              <div class="modal-body">
-                                 <iframe width="100%" height="250px"
-                                    src="https://thingspeak.com/channels/1663924/widgets/425130"></iframe>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <h5 class="modal-title">[ WARNING ] > 0.50 μSv/h</h5>
-                              </div>
-                              <div class="modal-body">
-                                 <iframe width="100%" height="250px"
-                                    src="https://thingspeak.com/channels/1663924/widgets/425133"></iframe>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <h5 class="modal-title">[ DANGER ] > 10 μSv/h</h5>
-                              </div>
-                              <div class="modal-body">
-                                 <iframe width="100%" height="250px"
-                                    src="https://thingspeak.com/channels/1663924/widgets/425134"></iframe>
+                                    src="https://thingspeak.com/channels/1663924/charts/3?width=auto&height=auto&bgcolor=%23ffffff&color=%23d62020&dynamic=true&days=60&title=Counts+Per+Second+%28CPS%29&type=column"></iframe>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                   <br/>
-
-                  <!-- <div class="card">
-                     <iframe width="450" height="260" style="border: 1px solid #cccccc;"
-                        src="https://thingspeak.com/channels/1663924/charts/3?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Microsievert+%28%CE%BCSv%2Fh%29+-+last+7+Days&type=column"></iframe>
-                  </div>
-                  <div class="card">
-                     <iframe width="450" height="260" style="border: 1px solid #cccccc;"
-                        src="https://thingspeak.com/channels/1663924/charts/2?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Minute+%28CPM%29+-+last+7+Days&type=column"></iframe>
-                  </div>
-                  <div class="card">
-                     <iframe width="450" height="260" style="border: 1px solid #cccccc;"
-                        src="https://thingspeak.com/channels/1663924/charts/1?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Second+%28CPS%29+-+last+7+Days&type=column"></iframe>
-                  </div> -->
                </div>
          </main>
       </div>
