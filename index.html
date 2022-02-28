@@ -8,136 +8,68 @@
       <meta name="author" content="Georgi Dobrishinov">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-         body {
-         font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-         margin: 2em;
+         html { font-size: 22px; }
+         body {  }
+         .card {
+         color: white;
          }
-         .container {
-         /*display: grid;*/
-         /*grid-template-columns: repeat(3, 1fr);*/
-         gap: 10px;
+         .cards {
+         margin: 0 auto;
+         padding: 0 2rem 0 2rem;
          display: grid;
-         align-items: center;
-         grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-         }
-         .box {
-         /*border: 3px solid #666;*/
-         background-color: #ddd;
-         border-radius: .5em;
-         padding: 10px;
-         cursor: move;
+         grid-gap: 1rem;
+         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
          text-align: center;
          }
-         .box.over {
-         border: 3px dotted #666;
+         @media only screen and (max-width: 1000px) {
+         .card {
+         height: 4rem;
          }
-         [draggable] {
-         user-select: none;
+         .cards {
+         grid-gap: 10rem;
+         text-align: center;
+         padding: 0 0 0 0;
          }
       </style>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3HB4L5MH"></script>
       <script>
-         document.addEventListener('DOMContentLoaded', (event) => {
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
          
-           var dragSrcEl = null;
-           
-           function handleDragStart(e) {
-         	this.style.opacity = '0.4';
-         	
-         	dragSrcEl = this;
-         
-         	e.dataTransfer.effectAllowed = 'move';
-         	e.dataTransfer.setData('text/html', this.innerHTML);
-           }
-         
-           function handleDragOver(e) {
-         	if (e.preventDefault) {
-         	  e.preventDefault();
-         	}
-         
-         	e.dataTransfer.dropEffect = 'move';
-         	
-         	return false;
-           }
-         
-           function handleDragEnter(e) {
-         	this.classList.add('over');
-           }
-         
-           function handleDragLeave(e) {
-         	this.classList.remove('over');
-           }
-         
-           function handleDrop(e) {
-         	if (e.stopPropagation) {
-         	  e.stopPropagation(); // stops the browser from redirecting.
-         	}
-         	
-         	if (dragSrcEl != this) {
-         	  dragSrcEl.innerHTML = this.innerHTML;
-         	  this.innerHTML = e.dataTransfer.getData('text/html');
-         	}
-         	
-         	return false;
-           }
-         
-           function handleDragEnd(e) {
-         	this.style.opacity = '1';
-         	
-         	items.forEach(function (item) {
-         	  item.classList.remove('over');
-         	});
-           }
-           
-           
-           let items = document.querySelectorAll('.container .box');
-           items.forEach(function(item) {
-         	item.addEventListener('dragstart', handleDragStart, false);
-         	item.addEventListener('dragenter', handleDragEnter, false);
-         	item.addEventListener('dragover', handleDragOver, false);
-         	item.addEventListener('dragleave', handleDragLeave, false);
-         	item.addEventListener('drop', handleDrop, false);
-         	item.addEventListener('dragend', handleDragEnd, false);
-           });
-         });
+         gtag('config', 'G-BF3HB4L5MH');
+          
       </script>
-	  <!-- Global site tag (gtag.js) - Google Analytics -->
-	  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF3HB4L5MH"></script>
-	  <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-BF3HB4L5MH');
-	  </script>
    </head>
    <body>
       <h1 style="text-align:center">Plovdiv Radiation Level</h1>
-      <div class="container">
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Microsievert+%28%CE%BCSv%2Fh%29&type=line"></iframe>
+      <div class="cards">
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Microsievert+%28%CE%BCSv%2Fh%29+-+last+2+Hours&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Counts+Per+Minute+%28CPM%29&type=line"></iframe>
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Counts+Per+Minute+%28CPM%29+-+last+2+Hours&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Counts+Per+Second+%28CPS%29&type=line"></iframe>
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=120&title=Counts+Per+Second+%28CPS%29+-+last+2+Hours&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/3?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Microsievert+%28%CE%BCSv%2Fh%29+-+7+Days&type=column"></iframe>
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/3?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Microsievert+%28%CE%BCSv%2Fh%29+-+last+7+Days&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/2?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Minute+%28CPM%29+-+7+Days&type=column"></iframe>
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/2?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Minute+%28CPM%29+-+last+7+Days&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/1?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Second+%28CPS%29+-+7+Days&type=column"></iframe>
+         <div class="card">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/charts/1?bgcolor=%23ffffff&color=%23d62020&days=7&dynamic=true&title=Counts+Per+Second+%28CPS%29+-+last+7+Days&type=column"></iframe>
          </div>
-         <div draggable="true" class="box">
+         <div class="card">
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/widgets/425130"></iframe>
          </div>
-         <div draggable="true" class="box">
+         <div class="card">
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/widgets/425133"></iframe>
          </div>
-         <div draggable="true" class="box">
+         <div class="card">
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1663924/widgets/425134"></iframe>
          </div>
       </div>
