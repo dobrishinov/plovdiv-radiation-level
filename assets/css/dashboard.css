@@ -8,6 +8,11 @@ body {
   vertical-align: text-bottom;
 }
 
+.feather-h {
+  vertical-align: middle;
+  margin: 10px;
+}
+
 /*
  * Sidebar
  */
