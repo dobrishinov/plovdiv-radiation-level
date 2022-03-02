@@ -58,97 +58,62 @@
 
                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                   <span>History</span>
-                  <!-- <a class="link-secondary" href="#" aria-label="Add new">
-                  <span data-feather="plus-circle"></span>
-                </a> -->
                </h6>
                <ul class="nav flex-column mb-2">
                   <li class="nav-item">
                      <a class="nav-link active" href="latest-24-hours.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 24 Hours
+                        Last 24 Hours
                      </a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="latest-48-hours.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 48 Hours
+                        Last 48 Hours
                      </a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="latest-7-days.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 7 Days
+                        Last 7 Days
                      </a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="latest-14-days.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 14 Days
+                        Last 14 Days
                      </a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="latest-30-days.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 30 Days
+                        Last 30 Days
                      </a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="latest-60-days.html">
                         <span data-feather="bar-chart-2"></span>
-                        Latest 60 Days
+                        Last 60 Days
                      </a>
                   </li>
-                  
-                  <h6
-                     class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                     <span>Legend</span>
-                  </h6>
-                  <li class="nav-item">
-                     <a class="nav-link" href="">
-                        <span class="badge bg-success">[ Normal Levels ] 0.10 - 0.50 μSv/h</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="">
-                        <span class="badge bg-warning text-dark">[ Warning Levels ] 0.50 - 1 μSv/h</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="">
-                        <span class="badge bg-danger">[ Danger Levels ] > 1.00 μSv/h</span>
-                     </a>
-                  </li>
-                  <!-- <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <span data-feather="bar-chart-2"></span>
-                        Latest 120 Days
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <span data-feather="bar-chart-2"></span>
-                        Latest 365 Days
-                     </a>
-                  </li> -->
                </ul>
             </div>
             <div class="version"><a class="btn btn-success"
                   href="https://github.com/dobrishinov/plovdiv-radiation-level"><i class="feather-h"
-                     data-feather="github"></i>v0.1.2</a></div>
+                     data-feather="github"></i>v0.1.3</a></div>
          </nav>
 
          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-               <h1 class="h2"><i class="feather-h" data-feather="bar-chart-2"></i>History - Latest 24 Hours</h1>
+               <h1 class="h2"><i class="feather-h" data-feather="bar-chart-2"></i>History - Last 24 Hours</h1>
             </div>
 
             <div class="table-responsive">
                <div class="container">
 
                   <div class="row">
-                     <div class="col">
+                     <div class="col-lg-6">
                         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
                               <path
@@ -156,42 +121,64 @@
                            </symbol>
                         </svg>
                         <div class="alert alert-warning d-flex align-items-center" role="alert">
-                           <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                           <svg class="bi flex-shrink-0 me-4" width="24" height="24" role="img" aria-label="Warning:">
                               <use xlink:href="#exclamation-triangle-fill" />
                            </svg>
 
-                           <div style="width: 40rem;">
-                              This data is collected from non-professional device. You don't need to trust this data or
-                              do any
-                              conclusions. <br /> If you want to compare or view official data, please go to <a
-                                 href="https://remap.jrc.ec.europa.eu/Advanced.aspx">European Commission website</a>.
-                              <hr /> Just keep in mind in European Commission website the radiation value are in
-                              "nSv/h".
-                              <br /> This mean you need to convert "μSv/h" to "nSv/h" if you want to compare the data.
+                           <div>
+                              This data is collected from non-professional devices.
+                              <br />
+                              <b>You don't need to trust this data or do any conclusions.</b>
+                              <br />
+                              If you want to compare or view official radiation data, please go to the <a
+                                 class="alert-link" href="https://remap.jrc.ec.europa.eu/Advanced.aspx">European
+                                 Commission website</a>.
+                              <hr /> Just keep in mind on the European Commission website the radiation value is in
+                              <b>"nSv/h"</b>. Before any comparison of the data you need manually to convert
+                              <b>"μSv/h"</b> to <b>"nSv/h"</b>.
                            </div>
                         </div>
                      </div>
 
-                     <div class="col" style="padding: 0.5rem;">
-                        <div class="card" style="width: 20rem;">
+                     <div class="col-lg-3">
+                        <div class="card">
                            <div class="card-body">
-                              <h5 class="card-title">Convert Microsievert [µSv] to Nanosievert [nSv]</h5>
-                              <p class="card-text">0.1 [µSv] = 100 [nSv]</p>
-                              <input id="inputMicrosievert" type="number" placeholder="[µSv]"
+                              <h5 class="card-title">Convert Microsievert "µSv" to Nanosievert "nSv"</h5>
+                              <!-- <p class="card-text">0.1 µSv = 100 nSv</p> -->
+                              <hr />
+                              <input id="inputMicrosievert" type="number" placeholder="µSv to nSv"
                                  oninput="microsievertConverter(this.value)"
                                  onchange="microsievertConverter(this.value)">
-                              = <span id="outputNanosievert">0</span> [nSv]
+                              <br />
+                              <br />
+                              <span id="outputMicrosievert">0.1</span> µSv = <span id="outputNanosievert">100</span> nSv
                            </div>
                         </div>
                         <script>
                            function microsievertConverter(valNum) {
+                              document.getElementById("outputMicrosievert").innerHTML = valNum;
                               document.getElementById("outputNanosievert").innerHTML = valNum * 1000;
                            }
                         </script>
                      </div>
-                  </div>
 
-                  <br />
+                     <div class="col-lg-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Radiation Level Legend</h5>
+                              <div class="legend">
+                                 <span class="badge badge-color normal space">Normal Levels <br /><br /> 0.10 - 0.50
+                                    μSv/h</span>
+                                 <br />
+                                 <span class="badge badge-color warning space">Warning Levels <br /><br /> 0.50 - 1
+                                    μSv/h</span>
+                                 <br />
+                                 <span class="badge badge-color danger space">Danger Levels <br /><br /> > 1.00 μSv/h</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 
                   <div class="row">
                      <div class="col">

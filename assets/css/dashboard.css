@@ -13,6 +13,35 @@ body {
   margin: 10px;
 }
 
+.legend {
+  text-align: center;
+}
+
+.legend .space {
+  margin: 5px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.card {
+  margin-bottom: 25px;
+}
+
+.badge-color {
+  background-color: rgb(77, 117, 158);
+}
+
+.normal {
+  color: #ffffff;
+}
+
+.warning {
+  color: #fbe6a8;
+}
+
+.danger {
+ color: #ffc7c7;
+}
 /*
  * Sidebar
  */
@@ -60,6 +89,9 @@ body {
   text-transform: uppercase;
 }
 
+.sidebar-dropdown {
+  padding: 1rem;
+}
 /*
  * Navbar
  */
