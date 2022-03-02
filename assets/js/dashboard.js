@@ -19,7 +19,7 @@ setInterval(function () {
 var widget = function() {
   var callService = function() {
     $.ajax({
-      url: "https://thingspeak.com/channels/1663924/feed/last.json?results=1",
+      url: "https://api.thingspeak.com/channels/1663924/feed/last.json?results=1",
       type: "GET",
       dataType: "json",
       success: function (response) {
