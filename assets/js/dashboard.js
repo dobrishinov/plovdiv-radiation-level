@@ -1,8 +1,6 @@
 (function () {
   'use strict'
-
   feather.replace({ 'aria-hidden': 'true' })
-
 })(),
 
 
@@ -34,3 +32,9 @@ var widget = function() {
     getDataFromService: function() { callService(); }
   };
 }();
+
+
+function microsievertConverter(valNum) {
+  document.getElementById("outputMicrosievert").innerHTML = valNum;
+  document.getElementById("outputNanosievert").innerHTML = valNum * 1000;
+};

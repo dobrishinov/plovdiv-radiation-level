@@ -30,6 +30,7 @@ body {
 
 .badge-color {
   background-color: rgb(77, 117, 158);
+  font-size: 11px;
 }
 
 .badge-color-current {

@@ -114,7 +114,7 @@
                <div class="container">
 
                   <div class="row">
-                     <div class="col-lg-6">
+                     <div class="col-lg-8">
                         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
                               <path
@@ -141,7 +141,7 @@
                         </div>
                      </div>
 
-                     <div class="col-lg-3">
+                     <div class="col-lg-4">
                         <div class="card">
                            <div class="card-body">
                               <h5 class="card-title">Convert Microsievert "µSv" to Nanosievert "nSv"</h5>
@@ -155,18 +155,12 @@
                               <span id="outputMicrosievert">0.1</span> µSv = <span id="outputNanosievert">100</span> nSv
                            </div>
                         </div>
-                        <script>
-                           function microsievertConverter(valNum) {
-                              document.getElementById("outputMicrosievert").innerHTML = valNum;
-                              document.getElementById("outputNanosievert").innerHTML = valNum * 1000;
-                           }
-                        </script>
+                        
                      </div>
 
-                     <div class="col-lg-3">
+                     <!-- <div class="col-lg-3">
                         <div class="card">
                            <div class="card-body">
-                              <!-- <h5 class="card-title">Radiation Level Legend</h5> -->
                               <div class="legend">
                                  <span class="badge badge-color normal space">Normal Levels <br /><br /> 0.10 - 0.50
                                     μSv/h</span>
@@ -179,19 +173,21 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
 
                   <div class="row">
                      <div class="col">
-                        <div class="modal-content">
-                           <div class="modal-header">
-                              <h5 class="modal-title">Current level</h5>
-                           </div>
-                           <div class="modal-body">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Current level</h5>
+                              <h6 class="card-subtitle mb-2 text-muted"><span class="badge badge-color">updating every
+                                    15s</span></h6>
+                              <hr />
                               <div class="row">
                                  <div class="col-4">
-                                    <h1><span class="badge badge-color-current">μSv/h<div id="uSv">Loading...</div></span>
+                                    <h1><span class="badge badge-color-current">μSv/h<div id="uSv">Loading...</div>
+                                       </span>
                                     </h1>
                                  </div>
                                  <div class="col-4">
@@ -203,12 +199,17 @@
                                     </h1>
                                  </div>
                               </div>
+                              <hr style="margin-top: 0px;">
+                              <span class="badge badge-color normal space">Normal Levels 0.10 - 0.50
+                                 μSv/h</span>
+                              <span class="badge badge-color warning space">Warning Levels 0.50 - 1
+                                 μSv/h</span>
+                              <span class="badge badge-color danger space">Danger Levels > 1.00
+                                 μSv/h</span>
                            </div>
                         </div>
                      </div>
                   </div>
-                  
-                  <br/>
 
                   <div class="row">
                      <div class="col">
