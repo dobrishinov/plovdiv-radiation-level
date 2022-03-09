@@ -22,6 +22,7 @@ body {
   padding-left: 8%;
   padding-right: 8%;
   font-size: .875rem;
+  width: 100%;
 }
 
 .card {
@@ -125,4 +126,12 @@ body {
 
 .col-xs-4.col-md-4.space{
   margin-bottom: 20px;
+}
+
+/*
+* API
+*/
+
+.hljs {
+  border-radius: 0.5rem;
 }
