@@ -1,4 +1,4 @@
 # plovdiv-radiation-level
-Radiation level in Plovdiv/Bulgaria
+:radioactive: Radiation level in Plovdiv/Bulgaria :radioactive:
 
-https://dobrishinov.github.io/plovdiv-radiation-level/
+Open: https://dobrishinov.github.io/plovdiv-radiation-level/
